@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{e8385bc1-47af-4eee-b23f-c873d497c046}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -185,8 +185,10 @@
     <Build Include="dbo\Stored Procedures\usp_GetUsersByPage.sql" />
     <Build Include="dbo\Stored Procedures\usp_GetUsersWithRoleId.sql" />
     <Build Include="dbo\Stored Procedures\usp_GetUsersPagination.sql" />
+    <Build Include="dbo\Stored Procedures\usp_authenticate_user_1.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PPTSDatabase.publish.xml" />
+    <None Include="PPTSDatabase_Mag.publish.publish.xml" />
   </ItemGroup>
 </Project>
