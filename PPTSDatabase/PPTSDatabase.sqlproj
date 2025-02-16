@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>PPTSDatabase</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{e8385bc1-47af-4eee-b23f-c873d497c046}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>PPTSDatabase</RootNamespace>
+    <AssemblyName>PPTSDatabase</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\HST_TRN_ScanPartBarcode.sql" />
+    <Build Include="dbo\Tables\TRN_ScanPartBarcode.sql" />
+    <Build Include="dbo\Tables\TRN_PalletSerialNo.sql" />
+    <Build Include="dbo\Tables\HST_TRN_PalletSerialNo.sql" />
+    <Build Include="dbo\Tables\HST_TRN_InvoiceDetails.sql" />
+    <Build Include="dbo\Tables\TRN_InvoiceDetails.sql" />
+    <Build Include="dbo\Tables\HST_TRN_BoxSerialNo.sql" />
+    <Build Include="dbo\Tables\TRN_BoxSerialNo.sql" />
+    <Build Include="dbo\Tables\TRN_BoxBarcodeDetails.sql" />
+    <Build Include="dbo\Tables\HST_TRN_BoxBarcodeDetails.sql" />
+    <Build Include="dbo\Tables\BoxSerialNo.sql" />
+    <Build Include="dbo\Tables\DayCode.sql" />
+    <Build Include="dbo\Tables\ErrorLog.sql" />
+    <Build Include="dbo\Tables\MonthCode.sql" />
+    <Build Include="dbo\Tables\MST_BioMetric.sql" />
+    <Build Include="dbo\Tables\MST_Cust_Bosch_PartNo_Rel.sql" />
+    <Build Include="dbo\Tables\MST_Customer.sql" />
+    <Build Include="dbo\Tables\MST_Form.sql" />
+    <Build Include="dbo\Tables\MST_Machine.sql" />
+    <Build Include="dbo\Tables\MST_Module.sql" />
+    <Build Include="dbo\Tables\MST_PartConfiguration.sql" />
+    <Build Include="dbo\Tables\MST_Role.sql" />
+    <Build Include="dbo\Tables\MST_SubModule.sql" />
+    <Build Include="dbo\Tables\MST_User.sql" />
+    <Build Include="dbo\Tables\PalletSerialNo.sql" />
+    <Build Include="dbo\Tables\REL_UserForm.sql" />
+    <Build Include="dbo\Tables\ShiftCode.sql" />
+    <Build Include="dbo\Tables\ShiftCodeMappings.sql" />
+    <Build Include="dbo\Tables\TRN_BoxLable_Verify.sql" />
+    <Build Include="dbo\Tables\TRN_BoxLable_VerifyTest.sql" />
+    <Build Include="dbo\Tables\TRN_PalletLable_Verify.sql" />
+    <Build Include="dbo\Tables\UserErrorLog.sql" />
+    <Build Include="dbo\Tables\UserErrorLog_2.sql" />
+    <Build Include="dbo\Tables\YearCode.sql" />
+    <Build Include="dbo\Views\vw_TRN_ScanPartBarcode.sql" />
+    <Build Include="dbo\Views\vw_TRN_PalletSerialNo.sql" />
+    <Build Include="dbo\Views\vw_TRN_InvoiceDetails.sql" />
+    <Build Include="dbo\Views\vw_TRN_BoxSerialNo.sql" />
+    <Build Include="dbo\Views\vw_TRN_BoxBarcodeDetails.sql" />
+    <Build Include="dbo\Functions\decryptdata.sql" />
+    <Build Include="dbo\Functions\DecryptDMCBatchCode.sql" />
+    <Build Include="dbo\Functions\encryptdata.sql" />
+    <Build Include="dbo\Functions\fnSplitString.sql" />
+    <Build Include="dbo\Stored Procedures\spAddRelationalFormUser.sql" />
+    <Build Include="dbo\Stored Procedures\spCheckBoxScanedSrNo.sql" />
+    <Build Include="dbo\Stored Procedures\spCheckFingerPrint.sql" />
+    <Build Include="dbo\Stored Procedures\spCheckFingerPrintCount.sql" />
+    <Build Include="dbo\Stored Procedures\spCheckPartconfiguration.sql" />
+    <Build Include="dbo\Stored Procedures\spCheckPartNoScaned.sql" />
+    <Build Include="dbo\Stored Procedures\spDeleteAndSelectTRN_BoxLable_Verify.sql" />
+    <Build Include="dbo\Stored Procedures\spDeleteAndSelectTRN_PalletLable_Verify.sql" />
+    <Build Include="dbo\Stored Procedures\spGetAllPartNowithIndex.sql" />
+    <Build Include="dbo\Stored Procedures\spGetBarcodeDataprint.sql" />
+    <Build Include="dbo\Stored Procedures\spGetBoschPartNoFromCustPartNo.sql" />
+    <Build Include="dbo\Stored Procedures\spGetBoxDateWiseReport.sql" />
+    <Build Include="dbo\Stored Procedures\spGetBoxSerialNoReport.sql" />
+    <Build Include="dbo\Stored Procedures\spGetFormsandModuleforUser.sql" />
+    <Build Include="dbo\Stored Procedures\spGetInvoiceReport.sql" />
+    <Build Include="dbo\Stored Procedures\spGetInvoiceReportDatewise.sql" />
+    <Build Include="dbo\Stored Procedures\spGetPalletBarcodeDataprint.sql" />
+    <Build Include="dbo\Stored Procedures\spGetPalletDateWiseReport.sql" />
+    <Build Include="dbo\Stored Procedures\spGetPalletWiseReport.sql" />
+    <Build Include="dbo\Stored Procedures\spGetPartDetails.sql" />
+    <Build Include="dbo\Stored Procedures\spGetPartSerialNoReport.sql" />
+    <Build Include="dbo\Stored Procedures\spGetUserInfo.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertBiometricdata.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertBoxDetails.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertBoxLable_Verify.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertBoxSerialData.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertPalletDetails.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertPalletLable_Verify.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertPalletSerialData.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertPartConfig.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertScanbarcode.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertUserErrorLog.sql" />
+    <Build Include="dbo\Stored Procedures\spInsertUserErrorLog_2.sql" />
+    <Build Include="dbo\Stored Procedures\spUpdateUserErrorLog.sql" />
+    <Build Include="dbo\Stored Procedures\spUpdateUserErrorLog_2.sql" />
+    <Build Include="dbo\Stored Procedures\spUserErrorLogReport.sql" />
+    <Build Include="dbo\Stored Procedures\spUserErrorLogReport_2.sql" />
+    <Build Include="dbo\Stored Procedures\spValidateUser.sql" />
+    <Build Include="dbo\Stored Procedures\spValidateUserforLogin.sql" />
+    <Build Include="dbo\Stored Procedures\spValidateUserforLoginWithFinger.sql" />
+    <Build Include="dbo\Stored Procedures\USP_CHECKPARTNOSCANED.sql" />
+    <Build Include="dbo\Stored Procedures\usp_DeleteAndSelectTRN_BoxLable_Verify.sql" />
+    <Build Include="dbo\Stored Procedures\usp_DeleteAndSelectTRN_PalletLable_Verify.sql" />
+    <Build Include="dbo\Stored Procedures\usp_DeleteAndSelectTRN_PalletLable_Verify_new.sql" />
+    <Build Include="dbo\Stored Procedures\usp_FindUser.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InsertBoxDetails.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InsertBoxSerialData.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InsertPalletDetails.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InsertPalletSerialData.sql" />
+    <Build Include="dbo\Stored Procedures\usp_InsertUpdateBiometricData.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ValidateUserforLoginWithFinger.sql" />
+    <Build Include="dbo\Stored Procedures\usp_authenticate_user.sql" />
+    <Build Include="dbo\Tables\ErrorLogs.sql" />
+    <Build Include="dbo\Stored Procedures\usp_LogError.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AddUpdateRole.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetRoleWiseUsers.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetRole.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetRoles.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetRolesByUser.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CheckRoleWithUser.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CheckRoleDuplicate.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ImportRoles.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AddFileImportLog.sql" />
+    <Build Include="dbo\Stored Procedures\usp_checkStatus.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetEnableRoles.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetfavoritesList.sql" />
+    <Build Include="dbo\Tables\FileImportLogs.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetRolesByPagination.sql" />
+    <Build Include="dbo\Stored Procedures\usp_AddUpdateUser.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetUser.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetUsers.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetEnabledRoles.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CheckUserDuplicate.sql" />
+    <Build Include="dbo\Stored Procedures\usp_DeleteUploadedUserImage.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetUsersByPage.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetUsersWithRoleId.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetUsersPagination.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PPTSDatabase.publish.xml" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Database/v17
+/.vs
+/PPTSDatabase/.vs/PPTSDatabase
+/PPTSDatabase/Import Schema Logs
+/PPTSDatabase/obj/Debug
+/PPTSDatabase/Security
+/PPTSDatabase/PPTSDatabase.sqlproj.user
+*.jfm
+*.dbmdl
+/PPTSDatabase/bin/Debug

@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[MST_User] (
+    [User_ID]       BIGINT         IDENTITY (1, 1) NOT NULL,
+    [Role_ID]       BIGINT         NOT NULL,
+    [Login_ID]      NVARCHAR (50)  NOT NULL,
+    [Password]      NVARCHAR (50)  NOT NULL,
+    [First_Name]    NVARCHAR (50)  NULL,
+    [Last_Name]     NVARCHAR (50)  NULL,
+    [Middle_Name]   NVARCHAR (25)  NULL,
+    [EmailId]       NVARCHAR (100) NULL,
+    [User_Image]    IMAGE          NULL,
+    [Address]       NVARCHAR (50)  NULL,
+    [City]          NVARCHAR (50)  NULL,
+    [State]         NVARCHAR (50)  NULL,
+    [Country]       NVARCHAR (50)  NULL,
+    [Pincode]       NVARCHAR (50)  NULL,
+    [Mobile_No]     NVARCHAR (50)  NULL,
+    [EmployeeId]    NVARCHAR (50)  NULL,
+    [IsFingerPrint] BIT            CONSTRAINT [DF_MST_User_IsFingerPrint] DEFAULT ((0)) NULL,
+    [IsActive]      BIT            NOT NULL,
+    [Created_By]    BIGINT         NOT NULL,
+    [Created_On]    DATETIME       NOT NULL,
+    [Modified_By]   BIGINT         NULL,
+    [Modified_On]   DATETIME       NULL,
+    CONSTRAINT [PK_MST_User] PRIMARY KEY CLUSTERED ([User_ID] ASC),
+    CONSTRAINT [FK_MST_User_MST_Role] FOREIGN KEY ([Role_ID]) REFERENCES [dbo].[MST_Role] ([Role_ID])
+);
+
