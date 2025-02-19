@@ -10,6 +10,7 @@
     [Created_On]               DATETIME      NULL,
     [Modified_By]              BIGINT        NULL,
     [Modified_On]              DATETIME      NULL,
+    [ShiftId] TINYINT NULL DEFAULT 0, 
     CONSTRAINT [PK_TRN_BoxSerialNo] PRIMARY KEY CLUSTERED ([TRN_BoxSerialNo_ID] ASC),
     CONSTRAINT [FK_TRN_BoxSerialNo_MST_User] FOREIGN KEY ([Created_By]) REFERENCES [dbo].[MST_User] ([User_ID]),
     CONSTRAINT [FK_TRN_BoxSerialNo_MST_User1] FOREIGN KEY ([Modified_By]) REFERENCES [dbo].[MST_User] ([User_ID])

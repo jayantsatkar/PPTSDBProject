@@ -186,6 +186,8 @@
     <Build Include="dbo\Stored Procedures\usp_GetUsersWithRoleId.sql" />
     <Build Include="dbo\Stored Procedures\usp_GetUsersPagination.sql" />
     <Build Include="dbo\Stored Procedures\usp_authenticate_user_1.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetFormsandModuleforUser.sql" />
+    <Build Include="dbo\Tables\MST_Shift.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PPTSDatabase.publish.xml" />
